@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin([
-        { from: './src/index.html', to: '' },
+        { from: './src/public', to: '' },
       ]
     ),
   ],
@@ -41,12 +41,6 @@ module.exports = {
           {
             // Loads a SASS/SCSS file and compiles it to CSS
             loader: 'sass-loader'
-          },
-          {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: [
-              'file-loader',
-            ],
           },
         ]
       }
