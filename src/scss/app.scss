@@ -2,7 +2,8 @@
 
 body {
     background-repeat: repeat-x;
-  }
+    background-image: url('../public/images/bg.jpg');
+}
 
 .head {
     display: flex;
@@ -49,7 +50,11 @@ body {
 }
 
 @media (min-width: 1200px){
-.container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 100%;
-}
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 100%;
+    }
 }

@@ -43,7 +43,11 @@ module.exports = {
             loader: 'sass-loader'
           },
         ]
-      }
+      },
+      {
+          test: /\.jpe?g$|\.gif$|\.png$/i,
+          loader: "file-loader?name=/images/[name].[ext]"
+      },
     ]
   }
 };
