@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -25,7 +26,8 @@ module.exports = {
           },
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader'
+            loader: 'css-loader',
+            use: [MiniCssExtractPlugin.loader, 'css-loader'],
           },
           {
             // Loader for webpack to process CSS with PostCSS
