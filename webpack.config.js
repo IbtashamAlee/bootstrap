@@ -15,14 +15,6 @@ module.exports = {
       ]
     ),
   ],
-  plugins: [
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
-  ],
   module: {
     rules: [
       {
@@ -35,7 +27,6 @@ module.exports = {
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
             loader: 'css-loader',
-            use: [MiniCssExtractPlugin.loader, 'css-loader'],
           },
           {
             // Loader for webpack to process CSS with PostCSS
