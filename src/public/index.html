@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>CUOnline Student Portal</title>
   </head>
 <body>
@@ -37,22 +38,37 @@
               </ul>
 
               <div class="tab-content">
-                <div id="roll_no" class="tab-pane active" style="margin: 10px;">
-                  <div class="pattern" style="font-size: 15px; color: darkgray;">
-                    CIIT/AA00-BBB-000/LHR
+          
+                  <div id="roll_no" class="tab-pane active" style="margin: 10px;">
+                    <form action="">
+                   <div class="form-group">
+                    <div class="pattern" style="font-size: 15px; color: darkgray;">
+                      CIIT/AA00-BBB-000/LHR
+                    </div>
+                    <input type="text" class="form-control" id="rollnumb" placeholder="Enter Registration ID">
                   </div>
-                  <input type="text" class="form-control" placeholder="Enter Registration ID">
-                </div>
+                </form>
+                  </div>
+                
 
-                <div id="list" class="tab-pane fade">
+                <div id="list" class="tab-pane fade" style="margin: 10px">
                   <div class="form-inline">
                     <select name="" id="">
                       <option value="SP20">SP20</option><option value="FA19">FA19</option><option value="SP19">SP19</option><option value="FA18">FA18</option><option value="SP18">SP18</option><option value="FA17">FA17</option><option value="SP17">SP17</option><option value="FA16">FA16</option><option value="SP16">SP16</option><option value="FA15">FA15</option><option value="SP15">SP15</option><option value="FA14">FA14</option><option value="SP14">SP14</option><option value="FA13">FA13</option><option value="SP13">SP13</option><option value="FA12">FA12</option><option value="FA11">FA11</option><option value="SP10">SP10</option><option value="FA08">FA08</option>
                     </select>
+                    <select name="" id="">
+                      <option value="BAF">BAF</option><option value="BAR">BAR</option><option value="BBA">BBA</option><option value="BCE">BCE</option><option value="BCS">BCS</option><option value="BDE">BDE</option><option value="BEC">BEC</option><option value="BEE">BEE</option><option value="BET">BET</option><option value="BID">BID</option><option value="BMC">BMC</option><option value="BPH">BPH</option><option value="BPY">BPY</option><option value="BSE">BSE</option><option value="BSM">BSM</option><option value="BSS">BSS</option><option value="BST">BST</option><option value="BTE">BTE</option><option value="CHE">CHE</option><option value="EEE">EEE</option><option value="PCH">PCH</option><option value="PCS">PCS</option><option value="PEE">PEE</option><option value="PHM">PHM</option><option value="PMS">PMS</option><option value="PMT">PMT</option><option value="PPC">PPC</option><option value="PPH">PPH</option><option value="PST">PST</option><option value="R06">R06</option><option value="RBA">RBA</option><option value="RCH">RCH</option><option value="RCS">RCS</option><option value="REC">REC</option><option value="REE">REE</option><option value="REL">REL</option><option value="RMS">RMS</option><option value="RMT">RMT</option><option value="RPH">RPH</option><option value="RPM">RPM</option><option value="RST">RST</option>
+                    </select>
+                    <input type="text">
                   </div>
                 </div>
               </div>
 
+              <form action="">
+                <div class="form-group">
+                  <input type="password" class="form-control">
+                </div>
+              </form>
             </div>
           </div>
         </div>
