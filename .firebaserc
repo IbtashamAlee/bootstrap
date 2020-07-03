@@ -1,5 +1,7 @@
 {
   "projects": {
-    "dist": "better-cui"
+    "dist": "better-cui",
+    "default": "better-cui",
+    "better-cui": "better-cui"
   }
 }

@@ -1,36 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>CUOnline Student Portal</title>
+    <link rel="stylesheet" href="./bundle.css" />
+    <link rel="shortcut icon" href="./images/fav.png" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-<body>
-    <div class="container">
+
+  <body>
+    <div id="loader">
+      <div class="spinner-grow text-primary">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div id="container">
       <div class="row">
         <div class="head">
           <div class="clogo">
-            <img src="./images/logo_with_text.png" alt="">
+            <img src="./images/logo_with_text.png" alt="" />
           </div>
           <div class="slogo">
-            <img src="./images/CUOnlineStudentConsole.png" alt="">
+            <img src="./images/CUOnlineStudentConsole.png" alt="" />
           </div>
         </div>
       </div>
       <div class="main_content">
         <div class="col-md-12">
-          <div class="col-md-8  content_NB">
-            <div class="noticeboard">
-               
-            
-            </div>
+          <div class="col-md-8 content_NB">
+            <div class="noticeboard"></div>
           </div>
-          <div class="col-md-4 content_login" >
+          <div class="col-md-4 content_login">
             <div class="login">
               <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#roll_no">By Roll No</a>
+                  <a class="nav-link active" data-toggle="tab" href="#roll_no"
+                    >By Roll No</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#list">By List</a>
@@ -38,41 +48,148 @@
               </ul>
 
               <div class="tab-content">
-          
-                  <div id="roll_no" class="tab-pane active" style="margin: 10px;">
-                    <form action="">
-                   <div class="form-group">
-                    <div class="pattern" style="font-size: 15px; color: darkgray;">
-                      CIIT/AA00-BBB-000/LHR
+                <div id="roll_no" class="tab-pane active" style="margin: 15px;">
+                  <form action="">
+                    <div class="form-group">
+                      <div
+                        class="pattern"
+                        style="font-size: 15px; color: darkgray;"
+                      >
+                        CIIT/AA00-BBB-000/LHR
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="rollnumb"
+                        placeholder="Enter Registration ID"
+                        required
+                      />
                     </div>
-                    <input type="text" class="form-control" id="rollnumb" placeholder="Enter Registration ID">
-                  </div>
-                </form>
-                  </div>
-                
+                  </form>
+                </div>
 
-                <div id="list" class="tab-pane fade" style="margin: 10px">
+                <div id="list" class="tab-pane fade" style="margin: 10px;">
                   <div class="form-inline">
                     <select name="" id="">
-                      <option value="SP20">SP20</option><option value="FA19">FA19</option><option value="SP19">SP19</option><option value="FA18">FA18</option><option value="SP18">SP18</option><option value="FA17">FA17</option><option value="SP17">SP17</option><option value="FA16">FA16</option><option value="SP16">SP16</option><option value="FA15">FA15</option><option value="SP15">SP15</option><option value="FA14">FA14</option><option value="SP14">SP14</option><option value="FA13">FA13</option><option value="SP13">SP13</option><option value="FA12">FA12</option><option value="FA11">FA11</option><option value="SP10">SP10</option><option value="FA08">FA08</option>
+                      <option value="SP20">SP20</option>
+                      <option value="FA19">FA19</option>
+                      <option value="SP19">SP19</option>
+                      <option value="FA18">FA18</option>
+                      <option value="SP18">SP18</option>
+                      <option value="FA17">FA17</option>
+                      <option value="SP17">SP17</option>
+                      <option value="FA16">FA16</option>
+                      <option value="SP16">SP16</option>
+                      <option value="FA15">FA15</option>
+                      <option value="SP15">SP15</option>
+                      <option value="FA14">FA14</option>
+                      <option value="SP14">SP14</option>
+                      <option value="FA13">FA13</option>
+                      <option value="SP13">SP13</option>
+                      <option value="FA12">FA12</option>
+                      <option value="FA11">FA11</option>
+                      <option value="SP10">SP10</option>
+                      <option value="FA08">FA08</option>
                     </select>
                     <select name="" id="">
-                      <option value="BAF">BAF</option><option value="BAR">BAR</option><option value="BBA">BBA</option><option value="BCE">BCE</option><option value="BCS">BCS</option><option value="BDE">BDE</option><option value="BEC">BEC</option><option value="BEE">BEE</option><option value="BET">BET</option><option value="BID">BID</option><option value="BMC">BMC</option><option value="BPH">BPH</option><option value="BPY">BPY</option><option value="BSE">BSE</option><option value="BSM">BSM</option><option value="BSS">BSS</option><option value="BST">BST</option><option value="BTE">BTE</option><option value="CHE">CHE</option><option value="EEE">EEE</option><option value="PCH">PCH</option><option value="PCS">PCS</option><option value="PEE">PEE</option><option value="PHM">PHM</option><option value="PMS">PMS</option><option value="PMT">PMT</option><option value="PPC">PPC</option><option value="PPH">PPH</option><option value="PST">PST</option><option value="R06">R06</option><option value="RBA">RBA</option><option value="RCH">RCH</option><option value="RCS">RCS</option><option value="REC">REC</option><option value="REE">REE</option><option value="REL">REL</option><option value="RMS">RMS</option><option value="RMT">RMT</option><option value="RPH">RPH</option><option value="RPM">RPM</option><option value="RST">RST</option>
+                      <option value="BAF">BAF</option>
+                      <option value="BAR">BAR</option>
+                      <option value="BBA">BBA</option>
+                      <option value="BCE">BCE</option>
+                      <option value="BCS">BCS</option>
+                      <option value="BDE">BDE</option>
+                      <option value="BEC">BEC</option>
+                      <option value="BEE">BEE</option>
+                      <option value="BET">BET</option>
+                      <option value="BID">BID</option>
+                      <option value="BMC">BMC</option>
+                      <option value="BPH">BPH</option>
+                      <option value="BPY">BPY</option>
+                      <option value="BSE">BSE</option>
+                      <option value="BSM">BSM</option>
+                      <option value="BSS">BSS</option>
+                      <option value="BST">BST</option>
+                      <option value="BTE">BTE</option>
+                      <option value="CHE">CHE</option>
+                      <option value="EEE">EEE</option>
+                      <option value="PCH">PCH</option>
+                      <option value="PCS">PCS</option>
+                      <option value="PEE">PEE</option>
+                      <option value="PHM">PHM</option>
+                      <option value="PMS">PMS</option>
+                      <option value="PMT">PMT</option>
+                      <option value="PPC">PPC</option>
+                      <option value="PPH">PPH</option>
+                      <option value="PST">PST</option>
+                      <option value="R06">R06</option>
+                      <option value="RBA">RBA</option>
+                      <option value="RCH">RCH</option>
+                      <option value="RCS">RCS</option>
+                      <option value="REC">REC</option>
+                      <option value="REE">REE</option>
+                      <option value="REL">REL</option>
+                      <option value="RMS">RMS</option>
+                      <option value="RMT">RMT</option>
+                      <option value="RPH">RPH</option>
+                      <option value="RPM">RPM</option>
+                      <option value="RST">RST</option>
                     </select>
-                    <input type="text">
+                    <input type="text" maxlength="3" required />
                   </div>
                 </div>
               </div>
 
               <form action="">
-                <div class="form-group">
-                  <input type="password" class="form-control">
+                <div class="form-group" style="padding: 15px;">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                  />
+                  <div style="width: 100%; height: 95px;">
+                    <div
+                      class="g-recaptcha"
+                      data-sitekey="6LflBfIUAAAAAJDJ7UAakL056Lv9TtACXbMFAAHg"
+                      style="float: right; margin: 8px 0px 8px 0px;"
+                    ></div>
+                  </div>
+                  <div
+                    class="checkbox rememberme controls_container"
+                    style="font-size: 14px;"
+                  >
+                    <button
+                      style="height: 45px; width: 70px;"
+                      id="LoginSubmit"
+                      type="submit"
+                      googlecaptchcheckattribute=""
+                      class="btn btn-primary"
+                    >
+                      Login
+                    </button>
+                    Forgot Password ?
+                    <a href="/ResetPassword/Request">Click Here!</a>
+                    <br />
+                    <div>
+                      <input type="hidden" name="RelationID" value="2" /><a
+                        style="
+                          text-decoration: underline;
+                          color: red;
+                          font-size: 14px;
+                          cursor: pointer;
+                          font-weight: bold;
+                        "
+                        >For Parent Console</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+
       <div class="col-md-12">
         <div class="row" style="margin-bottom: 20px;">
           <div class="col-md-8 news_board">
@@ -84,30 +201,72 @@
                 <div class="card">
                   <div class="card-header">CPR Guide</div>
                   <div class="card-body">
-                    <iframe width="197" height="150" src="https://www.youtube.com/embed/bAM0YkNLf7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-text">How to do CPR on an adult over 12 years age.</div>
+                    <iframe
+                      width="197"
+                      height="150"
+                      src="https://www.youtube.com/embed/bAM0YkNLf7M"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <div class="card-text">
+                      How to do CPR on an adult over 12 years age.
+                    </div>
                   </div>
-                  <a class="btn btn-primary" target="_blank" href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g">Learn More</a>
+                  <a
+                    class="btn btn-primary"
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g"
+                    >Learn More</a
+                  >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card">
                   <div class="card-header">COMSATS</div>
                   <div class="card-body">
-                    <iframe width="197" height="150" src="https://www.youtube.com/embed/8kJAeYR7-xw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-text">COMSATS University Islamabad Introduction.</div>
+                    <iframe
+                      width="197"
+                      height="150"
+                      src="https://www.youtube.com/embed/8kJAeYR7-xw"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <div class="card-text">
+                      COMSATS University Islamabad Introduction.
+                    </div>
                   </div>
-                  <a class="btn btn-primary" target="_blank" href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g">Learn More</a>
+                  <a
+                    class="btn btn-primary"
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g"
+                    >Learn More</a
+                  >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card">
                   <div class="card-header">News</div>
                   <div class="card-body">
-                    <iframe width="197" height="150" src="https://www.youtube.com/embed/r9jgXMq7Iaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-text">Eagle Eye With Moazam Shahbaz, 20 Oct 2019 (Din News)</div>
+                    <iframe
+                      width="197"
+                      height="150"
+                      src="https://www.youtube.com/embed/r9jgXMq7Iaw"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <div class="card-text">
+                      Eagle Eye With Moazam Shahbaz, 20 Oct 2019 (Din News)
+                    </div>
                   </div>
-                  <a class="btn btn-primary" target="_blank" href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g">Learn More</a>
+                  <a
+                    class="btn btn-primary"
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCNP6oTsWBxIyiprLhQ8xg1g"
+                    >Learn More</a
+                  >
                 </div>
               </div>
             </div>
@@ -118,47 +277,99 @@
             </div>
             <div class="event_container">
               <div class="single_event">
-                  <div class="date_time">
-                      <p class="date_month"><span class="date">22</span><span class="month">July</span></p>
-                      <p class="time">22-31 July, 2019</p>
-                  </div>
-                  <div class="event_text"><p>COMSATS Summer Workshops Art, Design &amp; Architecture</p></div>
-                  <a target="_blank" href="http://ww3.comsats.edu.pk/CIITBlogs/BlogsDetailsOuter.aspx?ArticleId=155037">Read More</a>
+                <div class="date_time">
+                  <p class="date_month">
+                    <span class="date">22</span><span class="month">July</span>
+                  </p>
+                  <p class="time">22-31 July, 2019</p>
+                </div>
+                <div class="event_text">
+                  <p>COMSATS Summer Workshops Art, Design &amp; Architecture</p>
+                </div>
+                <a
+                  target="_blank"
+                  href="http://ww3.comsats.edu.pk/CIITBlogs/BlogsDetailsOuter.aspx?ArticleId=155037"
+                  >Read More</a
+                >
               </div>
 
               <div class="single_event">
-                  <div class="date_time">
-                      <p class="date_month"><span class="date">11</span><span class="month">July</span></p>
-                      <p class="time">11-12 July, 2019</p>
-                  </div>
-                  <div class="event_text"><p>Training Workshop on "PYTHON: Data Analysis and Visualization"</p></div>
-                  <a target="_blank" href="http://ww3.comsats.edu.pk/ciitblogs/BlogsDetailsOuter.aspx?ArticleId=155026">Read More</a>
+                <div class="date_time">
+                  <p class="date_month">
+                    <span class="date">11</span><span class="month">July</span>
+                  </p>
+                  <p class="time">11-12 July, 2019</p>
+                </div>
+                <div class="event_text">
+                  <p>
+                    Training Workshop on "PYTHON: Data Analysis and
+                    Visualization"
+                  </p>
+                </div>
+                <a
+                  target="_blank"
+                  href="http://ww3.comsats.edu.pk/ciitblogs/BlogsDetailsOuter.aspx?ArticleId=155026"
+                  >Read More</a
+                >
               </div>
 
               <div class="single_event">
-                  <div class="date_time">
-                      <p class="date_month"><span class="date">22</span><span class="month">April</span></p>
-                      <p class="time">22 April 2019</p>
-                  </div>
-                  <div class="event_text"><p>Seminar: Interpreting Data and Improving Public Health Communication’ </p></div>
-                  <a target="_blank" href="https://www.comsats.edu.pk/NEFiles/Card.jpg">Read More</a>
+                <div class="date_time">
+                  <p class="date_month">
+                    <span class="date">22</span><span class="month">April</span>
+                  </p>
+                  <p class="time">22 April 2019</p>
+                </div>
+                <div class="event_text">
+                  <p>
+                    Seminar: Interpreting Data and Improving Public Health
+                    Communication’
+                  </p>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://www.comsats.edu.pk/NEFiles/Card.jpg"
+                  >Read More</a
+                >
               </div>
-          </div>
+            </div>
           </div>
         </div>
       </div>
       <footer>
         <div class="col-md-12 column footer_menu">
-            <div title="CUONLINE Student Portal Update Version Number 8.0" class="inner_row">
-                <p>
-                    <a style="font-weight: bold;font-size: 15px;" href="http://itscomsats.com/" target="_blank">
-                        CUOnline
-                    </a>, Principal Seat © 2020-COMSATS ®
-                </p>
-            </div>
+          <div
+            title="CUONLINE Student Portal Update Version Number 8.0"
+            class="inner_row"
+          >
+            <p>
+              <a
+                style="font-weight: bold; font-size: 15px;"
+                href="http://itscomsats.com/"
+                target="_blank"
+              >
+                CUOnline </a
+              >, Principal Seat © 2020-COMSATS ®
+            </p>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector("#loader").style.visibility = "visible";
+          document.querySelector("#container").style.visibility = "hidden";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+          document.querySelector("#container").style.visibility = "visible";
+          var v = document.getElementById("container");
+          v.className += "container";
+          document.querySelector("#container").style.display = "block";
+        }
+      };
+    </script>
     <script src="./bundle.js"></script>
   </body>
 </html>

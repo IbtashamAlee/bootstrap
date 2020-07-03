@@ -2,6 +2,8 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 module.exports = {
   entry: './src/app.js',
   mode: 'development',
@@ -11,44 +13,61 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin([
-        { from: './src/public', to: '' },
-      ]
-    ),
+      { from: './src/public', to: '' },
+    ]),
+    new MiniCssExtractPlugin({
+      filename: "bundle.css"
+    })
   ],
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
+        // Apply rule for .sass, .scss or .css files
+        test: /\.(sa|sc|c)ss$/,
+
+        // Set loaders to transform files.
+        // Loaders are applying from right to left(!)
+        // The first loader will be applied after others
         use: [
           {
-            // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+            // After all CSS loaders we use plugin to do his work.
+            // It gets all transformed CSS and extracts it into separate
+            // single bundled file
+            loader: MiniCssExtractPlugin.loader
           },
           {
-            // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader',
+            // This loader resolves url() and @imports inside CSS
+            loader: "css-loader",
           },
           {
-            // Loader for webpack to process CSS with PostCSS
-            loader: 'postcss-loader',
+            // Then we apply postCSS fixes like autoprefixer and minifying
+            loader: "postcss-loader"
+          },
+          {
+            // First we transform SASS to standard CSS
+            loader: "sass-loader",
             options: {
-              plugins: function () {
-                return [
-                  require('autoprefixer')
-                ];
-              }
+              implementation: require("sass")
             }
-          },
-          {
-            // Loads a SASS/SCSS file and compiles it to CSS
-            loader: 'sass-loader'
-          },
+          }
         ]
       },
       {
-          test: /\.jpe?g$|\.gif$|\.png$/i,
-          loader: "file-loader?name=/images/[name].[ext]"
-      },
+        // Now we apply rule for images
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            // Using file-loader for these files
+            loader: "file-loader",
+
+            // In options we can set different things like format
+            // and directory to save
+            options: {
+              outputPath: 'images'
+            }
+          }
+        ]
+      }
     ]
   }
 };
