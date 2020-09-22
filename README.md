@@ -1,5 +1,5 @@
 A clone of CUi Lahore Offical site login page 
-U can this clone here.
+U can visit this here.
 https://better-cui.web.app
 
 Original Site link is
